@@ -14,5 +14,16 @@
         3. 到此已经在当前用户配置了你的信息。下面需要生成你的ssh-key并添加到github上
         4. 生成秘钥；ssh-keygen -t rsa -C "your account email" (连续回车三次)
         5. 最后将公钥添加到git账户里，就OK啦。
+    * 有时候工作环境和个人环境都需要一个秘钥，这时候可以在生成秘钥的时候，指定名字并且需要添加config文件进行指定
+        1. 生成指定名称的秘钥；ssh-keygen -t rsa -C "your account email" -f ~/.ssh/指定文件名
+        2. 添加特别的配置，在ssh目录下新建config文件，内容如下
+            ```ruby
+            Host github-aysee
+            HostName github.com
+            User git
+            IdentityFile C:/Users/username/.ssh/aysee
+            你应该可以看懂的吧－－
+            ```
+        
      
     

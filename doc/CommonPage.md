@@ -24,6 +24,24 @@
             IdentityFile C:/Users/username/.ssh/aysee
             你应该可以看懂的吧－－
             ```
+
+2. 一次git提交生命过程中遇到的兄弟们（这里并不准备详细的介绍这些哥们）
+    * 新建文件/目录，修改，提交
+    * 一般仓库中的文件可能存在于这三种状态
+    ```
+        1. Untracked files 文件未被跟踪　【处于工作区】
+        2. Changes to be committed 文件已经被暂存，这是下次提交的内容　【处于暂存区】
+        3. Changes but not updated 文件被修改，但没有添加到暂存区　【工作区】
+    ```
+    * 在开始新的路上，要把有变化的文件添加到索引库中，这个时候首先要遇见：git add命令
+        1. git add -A \[path]: 表示把path内的所有的tracked文件那些被修改／被删除／以及untrack的文件，添加到索引库中
+        2. git add -u \[path]: 把path中所有的tracked文件，那些被修改／被删除的文件，添加到索引库中
+        3. git add -i \[path]: 可以查看到path中所有被修改过／被删除但是还没有提交的文件
+        4. add兄弟家族还有好多，具体可以看看--help管家
         
+    * 经历了add家族的接待，那些被添加到索引库的文件即将遇到另外一个兄弟：git commit命令，
+        1. git commit -m "提交的描述信息"　：提交暂存区的文件
+        2. git commit -a -m "提交的描述信息"　：　提交暂存区以及工作区中已被tracked文件
+        3. git commit --amend "再次补充添加上次提交的描述信息"：补充提交信息
      
     

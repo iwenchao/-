@@ -48,4 +48,14 @@
         2. 　git push \<远程主机>　\<本地分支>:\<远程分支名> ; 一般常用 git push，其他更具体的用法请Ｇｏｏｇｌｅ
       
 3. 天下大事，合久必分，分久必合。
-    * 接下来git branch
+    * 接下来git branch主要用法
+        1. git branch 查看本地分支列表，当前分支“*”标示
+        2. git branch \<branchname>　创建分支，基于当前HEAD指向的提交
+        3. git branch \<branchname> \<start-point>　创建分支，基于指定的提交节点
+        4. git branch -d \<branchname> 　删除分支，弱删除（删除时检查索要删除的分支是否已经合并到其他分支中，否则拒绝）
+        5. git branch -D \<branchname>　强制删除
+        6. git branch -m \<oldbranch>　\<newbranch> 重命名分支，如果版本库中已经存在newbranch的分支，拒绝
+        7. git branch -M \<oldbranch>　\<newbranch>　重命名分支，即使版本库中已经存在newbranch的分支，强制执行
+        
+    *关于分支的常识
+        1. 

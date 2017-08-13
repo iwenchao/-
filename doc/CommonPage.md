@@ -57,5 +57,13 @@
         6. git branch -m \<oldbranch>　\<newbranch> 重命名分支，如果版本库中已经存在newbranch的分支，拒绝
         7. git branch -M \<oldbranch>　\<newbranch>　重命名分支，即使版本库中已经存在newbranch的分支，强制执行
         
-    *关于分支的常识
-        1. 
+    * 那么git merge主要用法：把一个分支或某个commit的修改合并到现在的分支上
+        1. ```
+              usage: git merge [options] [<commit>...]
+                 or: git merge [options] <msg> HEAD <commit>
+                 or: git merge --abort  
+            ```
+        2. 先切换到目的分支：git checkout destination-branch
+        3. 再将目标分支合并到目的分支：　git merge aim-branch
+        4. 如果有冲突，先解决，再经过一次提交过程，完成合并
+        

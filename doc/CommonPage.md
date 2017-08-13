@@ -45,7 +45,16 @@
         3. git commit --amend "再次补充添加上次提交的描述信息"：补充提交信息
     * 经由commit的指引，我们来到了暂存区，这里都是即将要被push到老家的兄弟们：git push命令
         1. 该命令用于将本地分支更新到暂存区的文件，推送到远程主机：
-        2. 　git push \<远程主机>　\<本地分支>:\<远程分支名> ; 一般常用 git push，其他更具体的用法请Ｇｏｏｇｌｅ
+        2. git push \<远程主机>　\<本地分支>:\<远程分支名> ; 一般常用 git push，其他更具体的用法请Ｇｏｏｇｌｅ
+        3. 常见的一些情况：
+            * ```
+                1.git push origin master :表示　将本地分支master推送到origin主机的master分支，如果不存在，则新建
+                2.git push origin :master 表示　删除指定的远程分支master　
+                    等同于推送一个空本地分支到远程分支
+                    git push origin --delete master
+                3.git push 推送当前分支到远程
+                4.git push --all　推送所有本地分支到远程
+                ```
       
 3. 天下大事，合久必分，分久必合。
     * 接下来git branch主要用法

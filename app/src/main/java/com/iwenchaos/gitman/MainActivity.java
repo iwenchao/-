@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonPanel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //
             }
         });
     }

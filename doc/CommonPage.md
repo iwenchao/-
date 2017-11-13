@@ -24,6 +24,11 @@
             IdentityFile C:/Users/username/.ssh/aysee
             你应该可以看懂的吧－－
             ```
+         3. 在指定项目下，指定作者
+            ```
+            git config user.name "Author name"
+            git config user.email "Author email"
+            ```
 
 2. 一次git提交生命过程中遇到的兄弟们（这里并不准备详细的介绍这些哥们）
     * 新建文件/目录，修改，提交
